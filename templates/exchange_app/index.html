@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="background-image"></div>
+</body>
+</html>
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="card box-shadow m-2 form-wrap">
+                <div class="card-header text-center">
+                    <h3>Создание и редактирование статей</h3>
+                </div>
+                <form id="form" class="p-3" action='' method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            <label for="articleTitle">Заголовок статьи*</label>
+                            <input id='articleTitle' type="text" class="form-control" placeholder="Заголовок статьи" name="articleTitle">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 mb-0">
+                            <label for="articleContent">Содержание статьи*</label>
+                            <textarea id='articleContent' class="form-control" placeholder="Содержание статьи" name="articleContent"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-btn mt-3">
+                        <button type="submit" class="btn btn-primary">Сохранить статью</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
