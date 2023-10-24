@@ -24,7 +24,7 @@ def create_article(request):
 
 
 def article_list(request):
-    articles = Article.objects.all()[:1]  # Получаем первые две статьи
+    articles = Article.objects.all()  # Получаем первые две статьи
     context = {'articles': articles}
     return render(request, 'exchange_app/article_list.html', context)
 

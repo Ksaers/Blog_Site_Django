@@ -1,47 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/style.css">
-    <title>Мой блог</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать в мой блог</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Статьи</a></li>
-            <li><a href="#">Блог</a></li>
-            <li><a href="#">О нас</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="article">
-            <h2>Заголовок статьи 1</h2>
-            <p>Описание статьи 1. Здесь вы можете прочитать интересные статьи о различных темах.</p>
-            <a href="#">Читать далее</a>
-        </section>
-        <section class="article">
-            <h2>Заголовок статьи 2</h2>
-            <p>Описание статьи 2. Всегда свежие новости и полезные материалы.</p>
-            <a href="#">Читать далее</a>
-        </section>
-        <section class="article">
-            <h2>Заголовок статьи 3</h2>
-            <p>Описание статьи 3. Присоединяйтесь к нашему блогу и делитесь своими мыслями и идеями.</p>
-            <a href="#">Читать далее</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Мой блог. Все права защищены.</p>
-    </footer>
-</body>
-</html>
-
   <div class="background-image"></div>
 </body>
 </html>
 
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="card box-shadow m-2 form-wrap">
+                <div class="card-header text-center">
+                    <h3>Создание и редактирование статей</h3>
+                </div>
+                <form id="form" class="p-3" action='' method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            <label for="articleTitle">Заголовок статьи*</label>
+                            <input id='articleTitle' type="text" class="form-control" placeholder="Заголовок статьи" name="articleTitle">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 mb-0">
+                            <label for="articleContent">Содержание статьи*</label>
+                            <textarea id='articleContent' class="form-control" placeholder="Содержание статьи" name="articleContent"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-btn mt-3">
+                        <button type="submit" class="btn btn-primary">Сохранить статью</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

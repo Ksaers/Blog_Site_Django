@@ -1,68 +1,68 @@
-body, h1, h2, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-}
-
-/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: violet;
+    background-image: url('../img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/1.jpg'); /* Замените 'your-image.jpg' на путь к вашей картинке */
+  background-size: cover;
+  background-position: center;
+  animation: backgroundAnimation 100s infinite; /* 10s - продолжительность анимации, можно изменить по своему усмотрению */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-nav {
-    background-color: #444;
-}
-
-nav ul {
-    list-style: none;
+.container {
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-nav li {
-    margin: 10px;
+.form-wrap {
+    border-radius: 14px;
+    border: 3px solid black;
+    box-shadow: 0px 6px 20px #9c75ee, 0px 51px 69px rgb(23 18 43 / 59%);
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.article {
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
+.submit-btn {
     text-align: center;
-    padding: 10px;
+}
+
+.card-body {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+}
+
+@media (min-width: 481px) {
+    .card {
+        max-width: 1000px;
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 1000px;
+    }
 }

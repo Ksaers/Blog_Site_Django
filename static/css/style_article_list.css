@@ -1,0 +1,85 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+
+nav {
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article {
+    border: 1px solid #333;
+    margin: 10px 0;
+    padding: 10px;
+    background: aliceblue;
+    border-radius: 10px; /* Закруглить углы на 10px */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-image: url('../img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+
+    text-align: center;
+    padding: 10px;
+}
