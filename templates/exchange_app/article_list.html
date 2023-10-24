@@ -1,12 +1,47 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <div class="container">
-        <h2>Список статей</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <title>Мой блог</title>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мой блог</h1>
+    </header>
+    <nav>
         <ul>
-            {% for article in articles %}
-                <li><a href="{% url 'article_detail' article.id %}">{{ article.title }}</a></li>
-            {% endfor %}
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">О нас</a></li>
         </ul>
-    </div>
-{% endblock %}
+    </nav>
+    <main>
+        <section class="article">
+            <h2>Заголовок статьи 1</h2>
+            <p>Описание статьи 1. Здесь вы можете прочитать интересные статьи о различных темах.</p>
+            <a href="#">Читать далее</a>
+        </section>
+        <section class="article">
+            <h2>Заголовок статьи 2</h2>
+            <p>Описание статьи 2. Всегда свежие новости и полезные материалы.</p>
+            <a href="#">Читать далее</a>
+        </section>
+        <section class="article">
+            <h2>Заголовок статьи 3</h2>
+            <p>Описание статьи 3. Присоединяйтесь к нашему блогу и делитесь своими мыслями и идеями.</p>
+            <a href="#">Читать далее</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Мой блог. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+  <div class="background-image"></div>
+</body>
+</html>
+
